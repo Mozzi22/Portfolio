@@ -1,0 +1,32 @@
+{
+  "Metadata": {
+    "title": "Наталія | Портфоліо Frontend розробника",
+    "description": "Демонстрація проєктів на React, Next.js та TypeScript."
+  },
+  "Navigation": {
+    "home": "Головна",
+    "projects": "Проєкти",
+    "about": "Про мене"
+  },
+  "Hero": {
+    "jobTitle": "Frontend розробник",
+    "greeting": "Привіт, я Наталія.",
+    "description": "Я створюю захоплюючі, високопродуктивні веб-інтерфейси за допомогою React, Next.js та TypeScript. Захоплююся чистим кодом та сучасним дизайном."
+  },
+  "Projects": {
+    "title": "Вибрані проєкти",
+    "viewDetails": "Детальніше",
+    "viewLive": "Відвідати сайт",
+    "categories": {
+      "restaurant": "Ресторан",
+      "sports": "Спорт",
+      "wedding": "Весілля",
+      "automation": "Автоматизація"
+    }
+  },
+  "Footer": {
+    "copyright": "© 2026 Crafted by Nataliia",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

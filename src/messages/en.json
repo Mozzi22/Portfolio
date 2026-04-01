@@ -1,0 +1,32 @@
+{
+  "Metadata": {
+    "title": "Nataliia | Front-End Developer Portfolio",
+    "description": "Showcasing projects in React, Next.js, and TypeScript."
+  },
+  "Navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About"
+  },
+  "Hero": {
+    "jobTitle": "Frontend Developer",
+    "greeting": "Hi, I'm Nataliia.",
+    "description": "I craft immersive, high-performance web experiences with React, Next.js, and TypeScript. Passionate about clean code and cutting-edge design."
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "viewDetails": "View Details",
+    "viewLive": "View Live Site",
+    "categories": {
+      "restaurant": "Restaurant",
+      "sports": "Sports",
+      "wedding": "Wedding",
+      "automation": "Automation"
+    }
+  },
+  "Footer": {
+    "copyright": "© 2026 Crafted by Nataliia",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
