@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/routing'
-import type { Project } from '@/store/projectsSlice'
+import type { Project } from '@/store/features/projectsSlice'
 
 const ProjectCard = ({
   project,
@@ -26,12 +27,12 @@ const ProjectCard = ({
     >
       <div className="aspect-video relative overflow-hidden bg-slate-100 dark:bg-slate-800">
         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-        {/*<Image
+        <Image
           src={project.image}
           alt={project.title}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-500"
-        />*/}
+        />
       </div>
       <div className="p-6">
         <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-2 block">
@@ -41,7 +42,7 @@ const ProjectCard = ({
           {project.title}
         </h3>
         <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
-          {project.description}
+          {/*{project.description} todo description*/}
         </p>
         <Link
           href={`/projects/${project.id}`}

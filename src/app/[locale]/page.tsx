@@ -3,8 +3,8 @@
 import { useTranslations } from 'next-intl'
 
 import ProjectCard from '@/components/ui/ProjectCard'
+import { selectProjects } from '@/store/features/projectsSlice'
 import { useAppSelector } from '@/store/hooks'
-import { selectProjects } from '@/store/projectsSlice'
 
 const Home = () => {
   const projects = useAppSelector(selectProjects)

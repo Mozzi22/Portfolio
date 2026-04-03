@@ -20,9 +20,35 @@
     "categories": {
       "restaurant": "Restaurant",
       "sports": "Sports",
-      "wedding": "Wedding",
-      "automation": "Automation"
-    }
+      "events": "Events",
+      "automation": "Automation",
+      "advertising": "Advertising"
+    },
+    "allProjects": "All Projects",
+    "exploreMyWork": "Explore my work",
+    "exploreMyWorkDesc": "I've worked on {count} exciting projects across various domains, including restaurants, sports and event booking platforms, email template creation, and advertising campaigns.",
+    "exploreMyWorkAction": "Select a project from the sidebar to view detailed information."
+  },
+  "ProjectDetails": {
+    "notFound": "Project not found.",
+    "aboutProject": "About the Project",
+    "techStack": "Tech Stack",
+    "description-1": "",
+    "description-2": "",
+    "description-3": "",
+    "description-4": "",
+    "description-5": "",
+    "description-6": "",
+    "description-7": "",
+    "description-8": "",
+    "details-1": "",
+    "details-2": "",
+    "details-3": "",
+    "details-4": "",
+    "details-5": "",
+    "details-6": "",
+    "details-7": "",
+    "details-8": ""
   },
   "Footer": {
     "copyright": "© 2026 Crafted by Nataliia",
