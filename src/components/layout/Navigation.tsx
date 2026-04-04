@@ -31,7 +31,7 @@ export const Navbar = () => {
         />
       </Link>
       <nav className="pointer-events-auto md:flex justify-end items-center space-x-4">
-        <ul className="flex space-x-8 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-slate-200 dark:border-slate-800">
+        <ul className="flex space-x-8 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-slate-200">
           {navItems.map((item) => {
             const isActive =
               pathname === item.href ||
@@ -42,9 +42,7 @@ export const Navbar = () => {
                   href={item.href}
                   className={clsx(
                     'text-sm font-medium transition-colors hover:text-primary',
-                    isActive
-                      ? 'text-primary'
-                      : 'text-slate-600 dark:text-slate-400'
+                    isActive ? 'text-primary' : 'text-slate-600'
                   )}
                 >
                   {t(item.labelKey)}
@@ -63,7 +61,7 @@ export const Footer = () => {
   const t = useTranslations('Footer')
 
   return (
-    <footer className="w-full py-8 border-t border-slate-200 dark:border-slate-800 mt-auto">
+    <footer className="w-full py-8 border-t border-slate-200 mt-auto">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
         <p>{t('copyright')}</p>
         <div className="flex space-x-6 mt-4 md:mt-0">

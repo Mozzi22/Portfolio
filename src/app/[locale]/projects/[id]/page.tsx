@@ -1,5 +1,6 @@
 'use client'
 
+import { FileQuestion } from 'lucide-react'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
@@ -17,7 +18,13 @@ const ProjectDetail = () => {
 
   if (!id || !project) {
     return (
-      <div className="text-center py-20 text-slate-500">{t('notFound')}</div>
+      <div className="flex flex-col items-center justify-center py-32 text-center px-4 h-full animate-in fade-in duration-500">
+        <div className="bg-slate-100 p-6 rounded-t-3xl rounded-br-3xl rounded-bl-xl mb-6 ring-1 ring-slate-200 shadow-sm relative overflow-hidden group">
+          <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
+          <FileQuestion size={48} className="text-primary" />
+        </div>
+        <h2 className="text-2xl font-bold text-slate-800">{t('notFound')}</h2>
+      </div>
     )
   }
 
@@ -43,12 +50,12 @@ const ProjectDetail = () => {
 
       <div className=" flex flex-col md:flex-row">
         <div className="w-full md:w-2/3 flex">
-          <p className="text-xl text-slate-600 dark:text-slate-400 font-medium max-w-2xl md:text-left">
+          <p className="text-xl text-slate-600 font-medium max-w-2xl md:text-left">
             {t(`description-${id}`)}
           </p>
         </div>
 
-        <div className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl w-full md:w-1/3 flex">
+        <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-2xl w-full md:w-1/3 flex">
           <Image
             src={project.image}
             alt={project.title}
@@ -60,12 +67,10 @@ const ProjectDetail = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-slate-200 dark:border-slate-800">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-slate-200">
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">{t('aboutProject')}</h2>
-          <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-            {t(`details-${id}`)}
-          </p>
+          <p className="text-slate-600 leading-relaxed">{t(`details-${id}`)}</p>
         </div>
 
         <div className="space-y-4">
@@ -74,7 +79,7 @@ const ProjectDetail = () => {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold"
+                className="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold"
               >
                 {tech}
               </span>

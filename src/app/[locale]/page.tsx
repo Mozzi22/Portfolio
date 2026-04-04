@@ -21,7 +21,7 @@ const Home = () => {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t('greeting')}
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium">
             {t('description')}
           </p>
         </div>

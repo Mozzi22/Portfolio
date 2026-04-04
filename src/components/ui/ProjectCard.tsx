@@ -23,9 +23,9 @@ const ProjectCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 dark:border-slate-800"
+      className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200"
     >
-      <div className="aspect-video relative overflow-hidden bg-slate-100 dark:bg-slate-800">
+      <div className="aspect-video relative overflow-hidden bg-slate-100">
         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
         <Image
           src={project.image}
@@ -41,7 +41,7 @@ const ProjectCard = ({
         <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+        <p className="text-sm text-slate-600 mb-4 line-clamp-2">
           {/*{project.description} todo description*/}
         </p>
         <Link
