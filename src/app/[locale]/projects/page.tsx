@@ -19,7 +19,7 @@ const ProjectsOverview = () => {
         <h1 className="text-3xl font-extrabold tracking-tight">
           {t('exploreMyWork')}
         </h1>
-        <p className="text-slate-600 dark:text-slate-400">
+        <p className="text-slate-600">
           {t('exploreMyWorkDesc', { count: projects.length })}
         </p>
         <p className="text-sm font-bold text-primary">

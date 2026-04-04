@@ -18,8 +18,8 @@ const ProjectsLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div className="flex flex-col md:flex-row h-full min-h-[calc(100vh-200px)]">
-      <aside className="w-full md:w-72 bg-sidebar-bg border-r border-slate-200 dark:border-slate-800 p-6 flex flex-col space-y-6">
-        <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white uppercase mb-4">
+      <aside className="w-full md:w-72 bg-sidebar-bg border-r border-slate-200 p-6 flex flex-col space-y-6">
+        <h2 className="text-xl font-bold tracking-tight text-slate-900 uppercase mb-4">
           {t('allProjects')}
         </h2>
         <ul className="space-y-2">
@@ -32,16 +32,14 @@ const ProjectsLayout = ({ children }: { children: ReactNode }) => {
                   className={cn(
                     'flex flex-col p-3 rounded-xl transition-all duration-200 border',
                     isActive
-                      ? 'bg-white dark:bg-slate-800 border-primary shadow-sm'
-                      : 'bg-transparent border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 hover:border-slate-200 dark:hover:border-slate-700'
+                      ? 'bg-white border-primary shadow-sm'
+                      : 'bg-transparent border-transparent hover:bg-white/50 hover:border-slate-200'
                   )}
                 >
                   <span
                     className={cn(
                       'text-sm font-bold truncate',
-                      isActive
-                        ? 'text-primary'
-                        : 'text-slate-700 dark:text-slate-300'
+                      isActive ? 'text-primary' : 'text-slate-700'
                     )}
                   >
                     {project.title}
@@ -56,7 +54,7 @@ const ProjectsLayout = ({ children }: { children: ReactNode }) => {
         </ul>
       </aside>
 
-      <main className="flex-grow p-6 md:p-12 overflow-auto bg-white dark:bg-slate-900/50">
+      <main className="flex-grow p-6 md:p-12 overflow-auto bg-white">
         <div className="max-w-4xl mx-auto">{children}</div>
       </main>
     </div>

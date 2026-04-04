@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
   }
 
   return (
-    <div className="flex items-center bg-slate-100 dark:bg-slate-800 rounded-full p-1 border border-slate-200 dark:border-slate-700">
+    <div className="flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
       {routing.locales.map((loc) => (
         <button
           key={loc}
