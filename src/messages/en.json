@@ -50,6 +50,36 @@
     "details-7": "",
     "details-8": ""
   },
+  "About": {
+    "aboutMe": "About Me",
+    "aboutMeTitle": "I build digital products with ",
+    "purpose": "purpose",
+    "aboutMeDesc": "Based in Odesa, Ukraine, I build fast, user-focused interfaces that feel simple and intuitive. My goal is to turn ideas into smooth digital experiences through clean and thoughtful code.",
+    "yearsExperience": "Years Experience",
+    "projectsDone": "Projects Done",
+    "expertise": "Expertise",
+    "countYears": "{count} Years",
+    "myCoreTechStack": "My Core Tech Stack",
+    "getInTouch": "Get In Touch",
+    "getInTouchDesc": "Let's build something amazing together.",
+    "messageSent": "Message Sent!",
+    "messageSentDesc": "Thank you for reaching out. I'll get back to you shortly.",
+    "sendAnotherMessage": "Send another message.",
+    "yourName": "Your Name",
+    "messageDesc": "Tell me about your project...",
+    "sending": "Sending...",
+    "sendMessage": "Send Message",
+    "somethingWendWrong": "Something went wrong. Please try again.",
+    "networkError": "Network error. Please check your connection and try again."
+  },
+  "Validation": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "isRequired": "{field} is required",
+    "mustBeAtLeast": "{field} must be at least {count} characters",
+    "isInvalidEmail": "Invalid email address"
+  },
   "Footer": {
     "copyright": "© 2026 Crafted by Nataliia",
     "github": "GitHub",
