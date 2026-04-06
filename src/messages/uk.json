@@ -30,9 +30,9 @@
     "exploreMyWorkAction": "Оберіть проєкт у бічному меню, щоб переглянути детальну інформацію."
   },
   "ProjectDetails": {
-    "notFound": "Project not found.",
-    "aboutProject": "About the Project",
-    "techStack": "Tech Stack",
+    "notFound": "Проєкт не знайдено.",
+    "aboutProject": "Про проєкт",
+    "techStack": "Технологічний стек",
     "description-1": "",
     "description-2": "",
     "description-3": "",
@@ -49,6 +49,36 @@
     "details-6": "",
     "details-7": "",
     "details-8": ""
+  },
+  "About": {
+    "aboutMe": "Про мене",
+    "aboutMeTitle": "Я створюю цифрові продукти з ",
+    "purpose": "метою",
+    "aboutMeDesc": "Я проживаю в Одесі, Україна, і створюю швидкі та орієнтовані на користувача інтерфейси, які відчуваються простими й зрозумілими. Моя мета — перетворювати ідеї на зручний цифровий досвід через чистий і продуманий код.",
+    "yearsExperience": "Років досвіду",
+    "projectsDone": "Завершено проєктів",
+    "expertise": "Експертиза",
+    "countYears": "{count} Років",
+    "myCoreTechStack": "Мій основний техстек",
+    "getInTouch": "Зв’язатися",
+    "getInTouchDesc": "Давайте створимо щось круте разом.",
+    "messageSent": "Повідомлення надіслано!",
+    "messageSentDesc": "Дякую за звернення. Я відповім найближчим часом.",
+    "sendAnotherMessage": "Надіслати ще одне повідомлення",
+    "yourName": "Ваше ім’я",
+    "messageDesc": "Розкажіть про ваш проєкт...",
+    "sending": "Надсилання...",
+    "sendMessage": "Надіслати повідомлення",
+    "somethingWendWrong": "Щось пішло не так. Будь ласка, спробуйте ще раз.",
+    "networkError": "Помилка мережі. Перевірте підключення та спробуйте ще раз."
+  },
+  "Validation": {
+    "name": "Ім’я",
+    "email": "Email",
+    "message": "Повідомлення",
+    "isRequired": "{field} є обов’язковим",
+    "mustBeAtLeast": "{field} має містити щонайменше {count} символів",
+    "isInvalidEmail": "Невірна електронна адреса"
   },
   "Footer": {
     "copyright": "© 2026 Crafted by Nataliia",
