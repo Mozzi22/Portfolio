@@ -26,7 +26,7 @@ const NotFound = () => (
             <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Lost in Code?
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
               The page you&apos;re looking for has been moved to a different
               repository or never existed in the first place.
             </p>
