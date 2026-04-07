@@ -23,7 +23,7 @@ const SubmittedFormSection = ({ setIsSubmitted }: Props) => {
       <p className="text-slate-600 text-sm">{t('messageSentDesc')}</p>
       <button
         onClick={handleSendAnotherMessage}
-        className="text-sm font-bold text-primary underline underline-offset-4"
+        className="cursor-pointer font-bold text-primary underline underline-offset-4"
       >
         {t('sendAnotherMessage')}
       </button>
