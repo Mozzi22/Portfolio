@@ -23,7 +23,7 @@ const LanguageSwitcher = () => {
           key={loc}
           onClick={() => toggleLanguage(loc)}
           className={clsx(
-            'px-3 py-1 text-xs font-bold rounded-full transition-all uppercase tracking-wider',
+            'cursor-pointer px-3 py-1 text-xs font-bold rounded-full transition-all uppercase tracking-wider',
             locale === loc
               ? 'bg-primary text-white shadow-sm'
               : 'text-slate-500 hover:text-primary'
