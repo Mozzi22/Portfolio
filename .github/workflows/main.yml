@@ -2,31 +2,31 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
+      - uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-    - name: Run linter
-      run: npm run lint
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Build project
-      run: npm run build
-      env:
-        RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        CONTACT_EMAIL_TO: ${{ secrets.CONTACT_EMAIL_TO }}
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build project
+        run: npm run build
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          CONTACT_EMAIL_TO: ${{ secrets.CONTACT_EMAIL_TO }}

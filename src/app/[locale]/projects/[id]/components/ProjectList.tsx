@@ -2,7 +2,7 @@ import { ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { Link } from '@/i18n/routing'
-import { Project } from '@/store/features/projectsSlice'
+import { Project } from '@/types/Project'
 
 const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs))
 

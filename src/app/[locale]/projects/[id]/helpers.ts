@@ -8,11 +8,7 @@ import {
   Utensils
 } from 'lucide-react'
 
-import {
-  Project,
-  PROJECT_CATEGORIES,
-  ProjectCategory
-} from '@/store/features/projectsSlice'
+import { Project, PROJECT_CATEGORIES, ProjectCategory } from '@/types/Project'
 
 export const projectIcons: Record<ProjectCategory, LucideIcon> = {
   [PROJECT_CATEGORIES.RESTAURANT]: Utensils,
