@@ -6,15 +6,14 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/routing'
-import type { Project } from '@/store/features/projectsSlice'
+import type { Project } from '@/types/Project'
 
-const ProjectCard = ({
-  project,
-  index
-}: {
+type Props = {
   project: Project
   index: number
-}) => {
+}
+
+const ProjectCard = ({ project, index }: Props) => {
   const t = useTranslations('Projects')
 
   return (
@@ -41,9 +40,6 @@ const ProjectCard = ({
         <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-sm text-slate-600 mb-4 line-clamp-2">
-          {/*{project.description} todo description*/}
-        </p>
         <Link
           href={`/projects/${project.id}`}
           className="inline-flex items-center space-x-2 text-sm font-bold text-primary hover:text-primary-hover underline underline-offset-4"

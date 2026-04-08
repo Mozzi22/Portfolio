@@ -7,7 +7,8 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { ReactNode } from 'react'
 
-import { Footer, Navbar } from '@/components/layout/Navigation'
+import Footer from '@/components/layout/Footer'
+import Navigation from '@/components/layout/Navigation'
 import { routing } from '@/i18n/routing'
 import { ReduxProvider } from '@/store/provider'
 
@@ -30,13 +31,12 @@ export const generateMetadata = async ({
   }
 }
 
-const RootLayout = async ({
-  children,
-  params
-}: {
+type Props = {
   children: ReactNode
   params: Promise<{ locale: string }>
-}) => {
+}
+
+const RootLayout = async ({ children, params }: Props) => {
   const { locale } = await params
 
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
@@ -53,7 +53,7 @@ const RootLayout = async ({
       >
         <NextIntlClientProvider messages={messages}>
           <ReduxProvider>
-            <Navbar />
+            <Navigation />
             <main className="flex-grow pt-24 pb-12 md:px-12 lg:px-24">
               {children}
             </main>
