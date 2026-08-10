@@ -18,7 +18,7 @@ const Home = () => {
           <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold uppercase tracking-widest mb-6 inline-block">
             {t('jobTitle')}
           </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl w-fit font-extrabold tracking-tight mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t('greeting')}
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium">
@@ -36,8 +36,8 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </section>
