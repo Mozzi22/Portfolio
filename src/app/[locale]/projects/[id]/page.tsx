@@ -4,20 +4,27 @@ import { FileQuestion } from 'lucide-react'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import { getProjectData } from '@/app/[locale]/projects/[id]/helpers'
+import { useTextOverflow } from '@/hooks/useTextOverflow'
 import { selectProjectById } from '@/store/features/projectsSlice'
 import { useAppSelector } from '@/store/hooks'
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string | undefined }>()
 
+  const textRef = useRef<HTMLParagraphElement>(null)
+
   const [expanded, setExpanded] = useState(false)
 
   const project = useAppSelector(selectProjectById(id))
 
   const t = useTranslations('ProjectDetails')
+
+  const projectDetailsText = t(`details-${id}`)
+
+  const canExpand = useTextOverflow(textRef, projectDetailsText, 5)
 
   if (!id || !project) {
     return (
@@ -53,7 +60,7 @@ const ProjectDetail = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
         <div className="w-full md:w-2/3 flex">
           <p className="text-slate-600 leading-relaxed">
             {t(`description-${id}`)}
@@ -75,16 +82,19 @@ const ProjectDetail = () => {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">{t('aboutProject')}</h2>
           <p
-            className={`text-slate-600 leading-relaxed transition-all duration-300 ${expanded ? '' : 'line-clamp-5'}`}
+            ref={textRef}
+            className={`text-slate-600 ${expanded ? '' : 'line-clamp-5'}`}
           >
-            {t(`details-${id}`)}
+            {projectDetailsText}
           </p>
-          <button
-            onClick={handleToggle}
-            className="cursor-pointer inline-flex items-center space-x-2 text-sm font-bold text-primary hover:text-primary-hover underline underline-offset-4"
-          >
-            {t(expanded ? 'showLess' : 'showMore')}
-          </button>
+          {canExpand && (
+            <button
+              onClick={handleToggle}
+              className="cursor-pointer inline-flex items-center space-x-2 text-sm font-bold text-primary hover:text-primary-hover underline underline-offset-4"
+            >
+              {t(expanded ? 'showLess' : 'showMore')}
+            </button>
+          )}
         </div>
 
         <div className="space-y-4">
