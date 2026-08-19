@@ -22,7 +22,7 @@ const AboutPage = () => {
 
         <div className="bg-card p-10 rounded-3xl shadow-xl border border-slate-200 space-y-8">
           <h2 className="text-3xl font-bold">{t('getInTouch')}</h2>
-          <p className="text-slate-600">{t('getInTouchDesc')}</p>
+          <p className="text-red-500">{t('unavailableGetInTouchDesc')}</p>
 
           {isSubmitted ? (
             <SubmittedFormSection setIsSubmitted={setIsSubmitted} />

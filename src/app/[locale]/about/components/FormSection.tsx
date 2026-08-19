@@ -22,7 +22,7 @@ const FormSection = ({ setIsSubmitted }: Props) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
     reset,
     setError
   } = useForm<ContactFormData>({
@@ -120,10 +120,10 @@ const FormSection = ({ setIsSubmitted }: Props) => {
 
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled
         className="w-full cursor-pointer flex items-center justify-center space-x-3 py-5 bg-primary text-white font-extrabold rounded-xl shadow-lg hover:shadow-primary/40 transition-all hover:-translate-y-1 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed group"
       >
-        <span>{t(isSubmitting ? 'sending' : 'sendMessage')}</span>
+        <span>{t('sendMessage')}</span>
         <Send
           size={18}
           className="group-hover:translate-x-1 transition-transform"

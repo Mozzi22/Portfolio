@@ -64,6 +64,7 @@
     "myCoreTechStack": "My Core Tech Stack",
     "getInTouch": "Get In Touch",
     "getInTouchDesc": "Let's build something amazing together.",
+    "unavailableGetInTouchDesc": "Sending messages is prohibited under Upwork's rules, so this form is for demonstration purposes only.",
     "messageSent": "Message Sent!",
     "messageSentDesc": "Thank you for reaching out. I'll get back to you shortly.",
     "sendAnotherMessage": "Send another message.",
