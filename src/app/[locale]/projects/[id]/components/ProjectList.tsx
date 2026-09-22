@@ -24,19 +24,19 @@ const ProjectList = ({ projects, pathname, onItemClick }: Props) => (
             className={cn(
               'flex flex-col p-3 rounded-xl transition-all duration-200 border',
               isActive
-                ? 'bg-white border-primary shadow-sm'
-                : 'bg-transparent border-transparent hover:bg-white/50 hover:border-slate-200'
+                ? 'bg-background border-primary shadow-sm'
+                : 'bg-transparent border-transparent hover:bg-background/50 hover:border-light'
             )}
           >
             <span
               className={cn(
-                'text-sm font-bold truncate',
-                isActive ? 'text-primary' : 'text-slate-700'
+                'text-sm font-bold ',
+                isActive ? 'text-primary' : 'text-foreground/80'
               )}
             >
               {project.title}
             </span>
-            <span className="text-xs text-slate-500 uppercase tracking-wider">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider">
               {project.category}
             </span>
           </Link>

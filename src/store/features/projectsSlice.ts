@@ -12,49 +12,49 @@ const initialState: ProjectsState = {
   items: [
     {
       id: '1',
-      title: 'OrderPro',
+      title: 'Restaurant Management Platform — Client A',
       image: '/projects/restaurant-1.png',
       category: 'restaurant'
     },
     {
       id: '2',
-      title: 'UrbanGrill',
+      title: 'Restaurant Management Platform — Client B',
       image: '/projects/restaurant-2.png',
       category: 'restaurant'
     },
     {
       id: '3',
-      title: 'SunBite',
+      title: 'Restaurant Management Platform — Client C',
       image: '/projects/restaurant-3.png',
       category: 'restaurant'
     },
     {
       id: '4',
-      title: 'TasteAtlas',
+      title: 'Restaurant Management Platform — Client D',
       image: '/projects/restaurant-4.png',
       category: 'restaurant'
     },
     {
       id: '5',
-      title: 'SportSpot',
+      title: 'Sports Booking Platform',
       image: '/projects/sports-1.png',
       category: 'sports'
     },
     {
       id: '6',
-      title: 'EventSpace',
+      title: 'Events Booking Platform',
       image: '/projects/wedding-1.png',
       category: 'events'
     },
     {
       id: '7',
-      title: 'MailCraft',
+      title: 'Email Marketing Platform',
       image: '/projects/automation-1.png',
       category: 'automation'
     },
     {
       id: '8',
-      title: 'NextAd',
+      title: 'Advertising Management Platform',
       image: '/projects/ad-1.png',
       category: 'advertising'
     }

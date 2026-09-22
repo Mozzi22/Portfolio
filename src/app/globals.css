@@ -3,21 +3,29 @@
 :root {
   --background: #ffffff;
   --foreground: #111827;
+  --muted-foreground: #475569;
   --primary: #4f46e5;
   --primary-hover: #4338ca;
   --accent: #f59e0b;
   --card-bg: #ffffff;
   --sidebar-bg: #f9fafb;
+  --light: #E2E8F0;
+  --error: #EF4444;
+  --success: #16A34A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-accent: var(--accent);
   --color-card: var(--card-bg);
   --color-sidebar: var(--sidebar-bg);
+  --color-light: var(--light);
+  --color-error: var(--error);
+  --color-success: var(--success);
   --font-sans: 'Inter', sans-serif;
 }
 
