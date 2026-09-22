@@ -22,17 +22,17 @@ const NotFound = () => (
           404
         </motion.h1>
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="glass p-8 md:p-12 rounded-3xl shadow-2xl max-w-lg w-full border border-white/10">
+          <div className="glass p-8 md:p-12 rounded-3xl shadow-2xl max-w-lg w-full border border-background/10">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Lost in Code?
             </h2>
-            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               The page you&apos;re looking for has been moved to a different
               repository or never existed in the first place.
             </p>
             <Link
               href="/"
-              className="inline-flex items-center space-x-3 px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 group"
+              className="inline-flex items-center space-x-3 px-8 py-4 bg-primary hover:bg-primary-hover text-background rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 group"
             >
               <Home className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
               <span>Return to Home</span>

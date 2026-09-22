@@ -26,15 +26,15 @@ const ProjectsLayout = ({ children }: { children: ReactNode }) => {
       {/* Mobile Sticky Selection Bar */}
       <button
         onClick={handleOpen}
-        className="md:hidden sticky top-20 z-30 mx-4 my-2 bg-white/80 backdrop-blur-md flex items-center w-fit text-primary font-bold text-sm px-4 py-2 rounded-full border border-primary/20"
+        className="md:hidden sticky top-20 z-30 mx-4 my-2 bg-background/80 backdrop-blur-md flex items-center w-fit text-primary font-bold text-sm px-4 py-2 rounded-full border border-primary/20"
       >
         <span>{activeProject ? activeProject.title : t('allProjects')}</span>
         <ChevronRight size={16} className="mt-0.5" />
       </button>
 
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex w-72 bg-sidebar-bg border-r border-slate-200 p-6 flex-col space-y-6">
-        <h2 className="text-xl font-bold tracking-tight text-slate-900 uppercase mb-4">
+      <aside className="hidden md:flex w-72 bg-sidebar-bg border-r border-light p-6 flex-col space-y-6">
+        <h2 className="text-xl font-bold tracking-tight text-foreground uppercase mb-4">
           {t('allProjects')}
         </h2>
         <ProjectList projects={projects} pathname={pathname} />
@@ -47,20 +47,20 @@ const ProjectsLayout = ({ children }: { children: ReactNode }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] md:hidden bg-white/98 backdrop-blur-xl flex flex-col"
+            className="fixed inset-0 z-[100] md:hidden bg-background/98 backdrop-blur-xl flex flex-col"
           >
-            <div className="p-6 flex items-center justify-between border-b border-slate-100">
-              <h2 className="text-xl font-extrabold tracking-tight text-slate-900 uppercase">
+            <div className="p-6 flex items-center justify-between border-b border-light">
+              <h2 className="text-xl font-extrabold tracking-tight text-foreground uppercase">
                 {t('allProjects')}
               </h2>
               <button
                 onClick={handleClose}
-                className="p-2 bg-slate-100 rounded-full text-slate-600"
+                className="p-2 bg-muted-foreground/10 rounded-full text-muted-foreground"
               >
                 <X size={20} />
               </button>
             </div>
-            <div className="flex-grow overflow-y-auto p-6 bg-slate-50/50">
+            <div className="flex-grow overflow-y-auto p-6 bg-sidebar/50">
               <ProjectList
                 projects={projects}
                 pathname={pathname}
@@ -71,7 +71,7 @@ const ProjectsLayout = ({ children }: { children: ReactNode }) => {
         )}
       </AnimatePresence>
 
-      <main className="flex-grow p-6 md:p-12 overflow-auto bg-white">
+      <main className="flex-grow p-6 md:p-12 overflow-auto bg-background">
         <div className="max-w-4xl mx-auto">{children}</div>
       </main>
     </div>
