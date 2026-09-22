@@ -18,9 +18,9 @@ const SubmittedFormSection = ({ setIsSubmitted }: Props) => {
       animate={{ opacity: 1, y: 0 }}
       className="flex flex-col items-center justify-center py-12 space-y-4 text-center"
     >
-      <CheckCircle2 size={64} className="text-green-500" />
-      <h3 className="text-2xl font-bold text-green-600">{t('messageSent')}</h3>
-      <p className="text-slate-600 text-sm">{t('messageSentDesc')}</p>
+      <CheckCircle2 size={64} className="text-success/90" />
+      <h3 className="text-2xl font-bold text-success">{t('messageSent')}</h3>
+      <p className="text-muted-foreground text-sm">{t('messageSentDesc')}</p>
       <button
         onClick={handleSendAnotherMessage}
         className="cursor-pointer font-bold text-primary underline underline-offset-4"

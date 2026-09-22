@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: Props) => {
       href={`/projects/${project.id}`}
       className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200"
     >
-      <div className="aspect-video relative overflow-hidden bg-slate-100">
+      <div className="aspect-video relative overflow-hidden bg-light/50">
         <Image
           src={project.image}
           alt={project.title}

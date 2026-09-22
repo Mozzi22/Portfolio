@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
   }
 
   return (
-    <div className="flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
+    <div className="flex items-center bg-light/50 rounded-full p-1 border border-light">
       {routing.locales.map((loc) => (
         <button
           key={loc}
@@ -25,8 +25,8 @@ const LanguageSwitcher = () => {
           className={clsx(
             'cursor-pointer px-3 py-1 text-xs font-bold rounded-full transition-all uppercase tracking-wider',
             locale === loc
-              ? 'bg-primary text-white shadow-sm'
-              : 'text-slate-500 hover:text-primary'
+              ? 'bg-primary text-background shadow-sm'
+              : 'text-muted-foreground/80 hover:text-primary'
           )}
         >
           {loc}

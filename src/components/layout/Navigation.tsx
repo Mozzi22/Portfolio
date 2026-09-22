@@ -45,7 +45,7 @@ const Navigation = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex pointer-events-auto justify-end items-center space-x-4">
-          <ul className="flex space-x-8 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-slate-200">
+          <ul className="flex space-x-8 bg-background/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-light">
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href ||
@@ -56,7 +56,7 @@ const Navigation = () => {
                     href={item.href}
                     className={clsx(
                       'text-sm font-medium transition-colors hover:text-primary',
-                      isActive ? 'text-primary' : 'text-slate-600'
+                      isActive ? 'text-primary' : 'text-muted-foreground'
                     )}
                   >
                     {t(item.labelKey)}
@@ -73,7 +73,7 @@ const Navigation = () => {
           <LanguageSwitcher />
           <button
             onClick={handleToggleMenu}
-            className="pointer-events-auto p-2 bg-white/80 backdrop-blur-md rounded-xl border border-slate-200 shadow-sm text-slate-600 active:scale-95 transition-all"
+            className="pointer-events-auto p-2 bg-background/80 backdrop-blur-md rounded-xl border border-light shadow-sm text-muted-foreground active:scale-95 transition-all"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -88,7 +88,7 @@ const Navigation = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="fixed inset-0 z-40 md:hidden bg-white/95 backdrop-blur-xl flex flex-col pt-24 px-8"
+            className="fixed inset-0 z-40 md:hidden bg-background/95 backdrop-blur-xl flex flex-col pt-24 px-8"
           >
             <ul className="flex flex-col space-y-6">
               {navItems.map((item) => {
@@ -102,7 +102,7 @@ const Navigation = () => {
                       onClick={handleCloseMenu}
                       className={clsx(
                         'text-3xl font-extrabold transition-colors',
-                        isActive ? 'text-primary' : 'text-slate-800'
+                        isActive ? 'text-primary' : 'text-foreground/90'
                       )}
                     >
                       {t(item.labelKey)}

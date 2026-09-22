@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { Code2, User } from 'lucide-react'
+import { User } from 'lucide-react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 const AboutMeSection = () => {
@@ -16,19 +17,19 @@ const AboutMeSection = () => {
           {t('aboutMeTitle')}
           <span className="text-primary italic">{t('purpose')}</span>.
         </h1>
-        <p className="text-lg text-slate-600 leading-relaxed font-medium">
+        <p className="text-lg text-muted-foreground leading-relaxed font-medium">
           {t('aboutMeDesc')}
         </p>
         <div className="flex space-x-8 pt-4">
           <div>
             <div className="text-3xl font-bold text-primary">5+</div>
-            <div className="text-sm font-bold uppercase tracking-wider text-slate-400">
+            <div className="text-sm font-bold uppercase tracking-wider text-muted-foreground/60">
               {t('yearsExperience')}
             </div>
           </div>
           <div>
             <div className="text-3xl font-bold text-primary">16+</div>
-            <div className="text-sm font-bold uppercase tracking-wider text-slate-400">
+            <div className="text-sm font-bold uppercase tracking-wider text-muted-foreground/60">
               {t('projectsDone')}
             </div>
           </div>
@@ -40,10 +41,14 @@ const AboutMeSection = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="aspect-square relative rounded-3xl overflow-hidden bg-gradient-to-tr from-primary to-accent p-1"
       >
-        <div className="w-full h-full bg-slate-100 rounded-[calc(1.5rem-4px)] flex items-center justify-center p-8">
-          <div className="w-32 h-32 bg-primary/20 rounded-full flex items-center justify-center text-primary">
-            <Code2 size={64} />
-          </div>
+        <div className="relative w-full h-full rounded-[calc(1.5rem-4px)] overflow-hidden">
+          <Image
+            src="/fe-developer.jpg"
+            alt="The main front-end developer"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </motion.div>
     </section>
